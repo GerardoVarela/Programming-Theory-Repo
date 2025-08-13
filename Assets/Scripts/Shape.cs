@@ -5,6 +5,7 @@ public abstract class Shape : MonoBehaviour
 {
     public TextMeshProUGUI ShapeText;
 
+    // ENCAPSULATION
     private string m_Name = "";
     public string ShapeName
     {
@@ -36,8 +37,10 @@ public abstract class Shape : MonoBehaviour
         DisplayText();    
     }
 
+    // ABSTRACTION
     protected abstract void UpdateShapeName();
 
+    // ABSTRACTION
     public void DisplayText()
     {
         ShapeText.text = "¡You've clicked the " + m_Name + "!";
